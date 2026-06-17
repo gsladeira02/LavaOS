@@ -22,7 +22,7 @@ npm run dev
 
 - Landing page pública
 - Cadastro da empresa
-- Escolha de plano/checkout simulado
+- Escolha de plano com redirecionamento para InfinitePay
 - Login com bloqueio de assinatura
 - Onboarding obrigatório
 - Painel administrativo mobile-first
@@ -45,3 +45,21 @@ npm run dev
 ## Observação
 
 Este ZIP entrega a base funcional em HTML/CSS/JS para validação, venda inicial, demonstração e evolução. Para produção real com multiempresa seguro, conectar Supabase, RLS, autenticação real e gateway de pagamento.
+
+
+## Configurar InfinitePay
+
+O fluxo principal já foi ajustado para enviar o cliente para a InfinitePay.
+
+No arquivo `app.js`, troque os links em `INFINITEPAY_LINKS` pelos links reais de cada plano criados na sua conta InfinitePay:
+
+```js
+const INFINITEPAY_LINKS = {
+  mensal: 'COLE_AQUI_O_LINK_INFINITEPAY_MENSAL',
+  trimestral: 'COLE_AQUI_O_LINK_INFINITEPAY_TRIMESTRAL',
+  semestral: 'COLE_AQUI_O_LINK_INFINITEPAY_SEMESTRAL',
+  anual: 'COLE_AQUI_O_LINK_INFINITEPAY_ANUAL'
+};
+```
+
+Na produção real, depois conecte webhook/retorno de pagamento para liberar a assinatura automaticamente.
