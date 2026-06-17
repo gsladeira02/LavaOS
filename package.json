@@ -1,0 +1,17 @@
+{
+  "name": "lavaos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LavaOS - SaaS mobile-first para lava-jatos e estética automotiva",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
